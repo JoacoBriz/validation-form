@@ -2,56 +2,26 @@ const emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
 const numbers = /^ [0 - 9] + $/;
 
 
-// // Texto
-// const textError = document.createElement('p');
-// textError.innerHTML = '';
-// textError.classlist.add('text-error');
-
-
-export const validation = (name, email, lastName, phone, message) => { 
+export const validation = ({nameAlert, lastnameAlert, emailAlert, phoneAlert, messageAlert}, name, email, lastName, phone, message) => { 
   const nameTest = name.value.length === 0;
-  const emailTest = email.value.length === 0 || !emailRegExp.test(email.value);
   const lastNameTest = lastName.value.length === 0;
-  const phoneTest = phone.value.length === 0 || !numbers.test(phone.value);
+  const emailTest = email.value.length === 0 || emailRegExp.test(email.value);
+  const phoneTest = phone.value.length === 0 || numbers.test(phone.value);
   const messageTest = message.value.length === 0;
 
-  if (nameTest) {
-    name.className = "error";
-    // textError.innerHTML = 'Add Name';
-    // nameDiv.append(textError);
-  };
+  nameTest ? (name.className = "error", nameAlert.style.display = 'block') : (name.className = "form-name-input-success", nameAlert.style.display = 'none');
 
-  if(lastNameTest) {
-    lastName.className = "error";
-    // textError.innerHTML = 'Add Lastname';
-    // lastnameDiv.append(textError);
-  };
+  lastNameTest ? (lastName.className = "error", lastnameAlert.style.display = 'block') : (lastName.className = "form-name-input-success", lastnameAlert.style.display = 'none');
 
-  if(emailTest) {
-    email.className = "error";
-    // textError.innerHTML = 'Add Email';
-    // emailDiv.append(textError);
-  };
+  emailTest ? (email.className = "error", emailAlert.style.display = 'block') : (email.className = "form-name-input-success", emailAlert.style.display = 'none');
 
-  if(phoneTest) {
-    phone.className = "error";
-    // textError.innerHTML = 'Add Phone';
-    // phoneDiv.append(textError);
-  };
+  phoneTest ? (phone.className = "error", phoneAlert.style.display = 'block') : (phone.className = "form-name-input-success", phoneAlert.style.display = 'none');
 
-  if(messageTest) {
-    message.className = "error-textarea";
-    // textError.innerHTML = 'Add Message';
-    // messageDiv.append(textError);
-  };
+  messageTest ? (message.className = "error-textarea", messageAlert.style.display = 'block') : (message.className = "form-message-success", messageAlert.style.display = 'none');
   
-  if (name.value.length > 0 && emailTest > 0 && lastName.value.length > 0 && numbers > 0 && message.value.length > 0) {
-    alert('Datos enviados');
-    name.value = '';
-    email.value = '';
-    lastName.value = '';
-    phone.value = '';
-    message.value = '';
+  if (name.value.length > 0 && !emailTest > 0 && lastName.value.length > 0 && !phoneTest > 0 && message.value.length > 0) {
+    
+    alert('Datos Enviados');
   };
 
 };

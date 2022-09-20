@@ -14,29 +14,34 @@
         <p class="subtitle">To contact us, fill out the form below and we’ll get back to you within 24 hours.</p>
 
         <form class="form">
-            <div id="name-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="name">Your Name</label>
                 <input id="inputName" class="form-name-input" name="name" type="text">
+                <p id="inputName-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="lastname-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="lastname">Your Last Name</label>
                 <input id="inputLastName" class="form-name-input" name="lastname" type="text">
+                <p id="inputLastName-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="email-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="email">Your Email</label>
                 <input id="inputEmail" class="form-name-input" name="email" type="text">
+                <p id="inputEmail-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="phone-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="phone">Your Phone</label>
                 <input id="inputPhone" class="form-name-input" name="phone" type="text">
+                <p id="inputPhone-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="message-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="message">Your Message</label>
                 <textarea id="inputMessage" class="form-message-input" name="message" type="text"></textarea>
+                <p id="textArea-alert" class="input-alert-none">Complete File</p>
             </div>
 
             <div class="form-submit">
@@ -45,5 +50,7 @@
 
         </form>
     </section>
+
+    <script src="sweetalert2.all.min.js"></script>
 </body>
 </html>

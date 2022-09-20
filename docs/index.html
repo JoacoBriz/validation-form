@@ -7,36 +7,41 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png" />
     <link rel="stylesheet" href="./styles.css">
     <title>Form Validation</title>
-<link href="main.c94f8562c390b89b9581.css" rel="stylesheet"></head>
+<link href="main.ae08d534d0dc4e2c8e95.css" rel="stylesheet"></head>
 <body>
     <section class="form-container">
         <h2 class="title">Let's Talk!</h2>
         <p class="subtitle">To contact us, fill out the form below and we’ll get back to you within 24 hours.</p>
 
         <form class="form">
-            <div id="name-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="name">Your Name</label>
                 <input id="inputName" class="form-name-input" name="name" type="text">
+                <p id="inputName-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="lastname-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="lastname">Your Last Name</label>
                 <input id="inputLastName" class="form-name-input" name="lastname" type="text">
+                <p id="inputLastName-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="email-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="email">Your Email</label>
                 <input id="inputEmail" class="form-name-input" name="email" type="text">
+                <p id="inputEmail-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="phone-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="phone">Your Phone</label>
                 <input id="inputPhone" class="form-name-input" name="phone" type="text">
+                <p id="inputPhone-alert" class="input-alert-none">Complete File</p>
             </div>
 
-            <div id="message-div" class="form-input-container">
+            <div class="form-input-container">
                 <label class="form-label" for="message">Your Message</label>
                 <textarea id="inputMessage" class="form-message-input" name="message" type="text"></textarea>
+                <p id="textArea-alert" class="input-alert-none">Complete File</p>
             </div>
 
             <div class="form-submit">
@@ -45,5 +50,7 @@
 
         </form>
     </section>
-<script type="text/javascript" src="main.98c573e1495780111e9b.js"></script></body>
+
+    <script src="sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="main.a8edc8941dfe9abf7783.js"></script></body>
 </html>
